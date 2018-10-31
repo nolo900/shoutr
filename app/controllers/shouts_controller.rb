@@ -15,6 +15,7 @@ class ShoutsController < ApplicationController
   end
 
   def content_from_params
+    #a bit of meta programming here to instantiate the Content type, i.e. TextShout.new(content_params)
     params[:content_type].new(content_params)
   end
 
